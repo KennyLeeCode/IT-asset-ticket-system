@@ -1,0 +1,126 @@
+/* Global reset and base styles for the whole app */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+/* Shared page wrapper used by all main pages */
+.page {
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page title at the top of each section */
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+/* White card container used throughout the app */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Standard button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary  { background-color: #3b82f6; color: white; }
+.btn-danger   { background-color: #ef4444; color: white; }
+.btn-secondary { background-color: #e2e8f0; color: #475569; }
+
+/* Status badge chips used on tickets and devices */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-open        { background-color: #dbeafe; color: #1d4ed8; }
+.badge-in_progress { background-color: #fef9c3; color: #a16207; }
+.badge-resolved    { background-color: #dcfce7; color: #15803d; }
+.badge-closed      { background-color: #f1f5f9; color: #64748b; }
+.badge-available   { background-color: #dcfce7; color: #15803d; }
+.badge-assigned    { background-color: #dbeafe; color: #1d4ed8; }
+.badge-in_repair   { background-color: #fef9c3; color: #a16207; }
+.badge-retired     { background-color: #f1f5f9; color: #64748b; }
+.badge-low         { background-color: #f0fdf4; color: #16a34a; }
+.badge-medium      { background-color: #fffbeb; color: #d97706; }
+.badge-high        { background-color: #fef2f2; color: #dc2626; }
+.badge-critical    { background-color: #4c0519; color: #fda4af; }
+
+/* Shared form layout used in modals and forms */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
