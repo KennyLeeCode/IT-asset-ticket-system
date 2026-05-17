@@ -1,0 +1,190 @@
+/* Top bar with the page title and New Ticket button */
+.tickets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+/* New ticket form card */
+.ticket-form-card {
+  margin-bottom: 24px;
+}
+
+.card-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+/* Red error message inside the form */
+.form-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+/* Filter dropdowns row */
+.ticket-filters {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.filter-group select {
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1e293b;
+  background: white;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Small text showing how many tickets are visible */
+.ticket-count {
+  margin-left: auto;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* The list of ticket rows */
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Each individual ticket row */
+.ticket-row {
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+}
+
+.ticket-row:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlighted border when the row is expanded */
+.ticket-selected {
+  border-color: #3b82f6;
+}
+
+.ticket-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Ticket number and title on one line */
+.ticket-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ticket-id {
+  font-size: 12px;
+  color: #94a3b8;
+  font-weight: 600;
+  min-width: 32px;
+}
+
+.ticket-title-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Badges and metadata on the second line */
+.ticket-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ticket-meta-text {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Controls and description shown when a row is expanded */
+.ticket-controls {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.control-group select {
+  padding: 7px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1e293b;
+  background: white;
+  outline: none;
+  min-width: 160px;
+  cursor: pointer;
+}
+
+/* Full width description block at the bottom of an expanded ticket */
+.ticket-description-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.ticket-description-box strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.ticket-description-box p {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+}
