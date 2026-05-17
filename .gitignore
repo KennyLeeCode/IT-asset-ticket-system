@@ -1,0 +1,9 @@
+# Ignore installed packages - these get recreated by running npm install
+node_modules/
+
+# Ignore the .env file because it contains passwords and secret keys
+.env
+
+# Ignore OS junk files
+.DS_Store
+Thumbs.db
