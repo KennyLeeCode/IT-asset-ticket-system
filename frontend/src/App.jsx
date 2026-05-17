@@ -3,11 +3,10 @@ import { useAuth } from "./context/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 import Navbar from "./components/Navbar";
 import Login from "./pages/Login";
-
-// These pages will be built in the next parts
 import Dashboard from "./pages/Dashboard";
 import Tickets from "./pages/Tickets";
 import Assets from "./pages/Assets";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const { user } = useAuth();
@@ -23,14 +22,14 @@ function App() {
 
         {/* Protected routes - only logged in users can access these */}
         <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-        <Route path="/tickets" element={<PrivateRoute><Tickets /></PrivateRoute>} />
-        <Route path="/assets" element={<PrivateRoute><Assets /></PrivateRoute>} />
+        <Route path="/tickets"   element={<PrivateRoute><Tickets /></PrivateRoute>} />
+        <Route path="/assets"    element={<PrivateRoute><Assets /></PrivateRoute>} />
 
         {/* Send anyone visiting the root URL to the dashboard */}
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
-        {/* Catch any URL that does not match and redirect to the dashboard */}
-        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+        {/* Anything that does not match shows a 404 page */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );
